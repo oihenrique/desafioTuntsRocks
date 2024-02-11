@@ -1,6 +1,6 @@
 import os.path
 from math import ceil
-from services.sheet_utils import update_status, update_naf, print_student_info
+from services.sheet_utils import update_cell, update_naf, print_student_info
 
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
@@ -54,18 +54,18 @@ def main():
 
             max_absences = 15
             if int(grade_row[2]) > max_absences:
-                update_status(sheet, SPREADSHEET_ID, f"G{index}", "Reprovado por falta")
+                update_cell(sheet, SPREADSHEET_ID, f"G{index}", "Reprovado por falta")
                 print_student_info(grade_row[1], grade_row[0], average_score, "Reprovado por falta",
                                    num_absences=int(grade_row[2]))
             elif average_score < 50:
-                update_status(sheet, SPREADSHEET_ID, f"G{index}", "Reprovado por nota")
+                update_cell(sheet, SPREADSHEET_ID, f"G{index}", "Reprovado por nota")
                 print_student_info(grade_row[1], grade_row[0], average_score, "Reprovado por nota")
             elif 70 > average_score >= 50:
-                update_status(sheet, SPREADSHEET_ID, f"G{index}", "Exame final")
+                update_cell(sheet, SPREADSHEET_ID, f"G{index}", "Exame final")
                 naf = ceil(100 - average_score)
                 print_student_info(grade_row[1], grade_row[0], average_score, "Exame final", naf)
             else:
-                update_status(sheet, SPREADSHEET_ID, f"G{index}", "Aprovado")
+                update_cell(sheet, SPREADSHEET_ID, f"G{index}", "Aprovado")
                 print_student_info(grade_row[1], grade_row[0], average_score, "Aprovado")
 
             update_naf(sheet, SPREADSHEET_ID, f"H{index}", naf)

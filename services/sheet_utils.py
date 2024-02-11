@@ -1,6 +1,6 @@
-def update_status(sheet, spreadsheet_id, cell_range, status):
+def update_cell(sheet, spreadsheet_id, cell_range, status):
     """
-    Updates the status of a cell in a Google Sheets spreadsheet.
+    Updates the cell value in a Google Sheets spreadsheet.
 
     Parameters:
     - sheet: The Google Sheets API service object.
@@ -20,7 +20,7 @@ def update_status(sheet, spreadsheet_id, cell_range, status):
 
 def update_naf(sheet, spreadsheet_id, cell_range, naf_score):
     """
-    Updates the NAF (minimum passing score) of a cell in a Google Sheets spreadsheet.
+    Updates the NAF (minimum passing score) in a Google Sheets spreadsheet.
 
     Parameters:
     - sheet: The Google Sheets API service object.
