@@ -62,9 +62,9 @@ fórmula: `naf >= 100 - média`, sendo o resultado arredondado para o próximo n
 
 1. Abra a planilha: https://docs.google.com/spreadsheets/d/1uYa4Eo6Os3fdbF1YK8fvIxlcyzvBxIpPjpMIJwdOhZ8/edit?usp=sharing
 2. Execute o arquivo `main.py`;
-3. Será exibido o log de informações geradas pelo script enquanto a planilha é atualizada.
+3. Será exibido o log de informações geradas pelo script no terminal enquanto a planilha é atualizada.
 
 ## Contato
 
-Você me chamar no: [LinkedIn](https://www.linkedin.com/in/oihenriquegomes/), ou enviar um e-mail para:
+Você pode me chamar no: [LinkedIn](https://www.linkedin.com/in/oihenriquegomes/), ou enviar um e-mail para:
 contato.henriquegomes@hotmail.com
